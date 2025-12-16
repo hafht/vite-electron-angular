@@ -1,18 +1,26 @@
 {
   "name": "@creative-force/electron",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "build": "vite build",
-    "build:watch": "vite build --watch"
+    "build:watch": "vite build --watch",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "inversify": "^6.0.2",

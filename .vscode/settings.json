@@ -1,0 +1,18 @@
+{
+  "debug.javascript.autoAttachFilter": "disabled",
+  "debug.javascript.usePreview": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": false,
+    "**/out": false,
+    "**/dist": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/out": false,
+    "**/dist": true
+  }
+}

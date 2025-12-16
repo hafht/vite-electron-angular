@@ -3,8 +3,16 @@ import angular from '@analogjs/vite-plugin-angular'
 import { resolve } from 'node:path'
 
 export default defineConfig({
-  main: {},
-  preload: {},
+  main: {
+    build: {
+      sourcemap: true
+    }
+  },
+  preload: {
+    build: {
+      sourcemap: true
+    }
+  },
   renderer: {
     root: 'src/renderer',
     plugins: [
@@ -12,9 +20,13 @@ export default defineConfig({
         tsconfig: resolve(__dirname, 'src/renderer/tsconfig.app.json')
       })
     ],
+    build: {
+      sourcemap: true
+    },
     server: {
       port: 5173,
-      strictPort: true
+      strictPort: true,
+      sourcemapIgnoreList: false
     }
   }
 })
