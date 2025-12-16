@@ -2,6 +2,10 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import { createElectronApp } from '@creative-force/electron'
+
+const appInfo = createElectronApp()
+console.log('App:', appInfo.name)
 
 function createWindow(): void {
   // Create the browser window.

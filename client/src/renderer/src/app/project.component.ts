@@ -30,7 +30,7 @@ import { Component } from '@angular/core'
   ]
 })
 export class ProjectComponent {
-    text = 'Thử sửa text này để xem HMR cập nhật ngay. 2 333 '
+    text = 'Hehehe 222 2 23'
     ngOnInit(): void {
         console.log('ProjectComponent ngOnInit')
     }

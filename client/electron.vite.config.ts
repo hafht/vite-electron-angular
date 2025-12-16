@@ -5,7 +5,11 @@ import { resolve } from 'node:path'
 export default defineConfig({
   main: {
     build: {
-      sourcemap: true
+      sourcemap: true,
+      rollupOptions: {
+        // External workspace package - will be resolved at runtime from node_modules
+        external: ['@creative-force/electron']
+      }
     }
   },
   preload: {
