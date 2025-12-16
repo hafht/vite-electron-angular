@@ -1,0 +1,26 @@
+{
+  "name": "@creative-force/electron",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:watch": "vite build --watch"
+  },
+  "dependencies": {
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.0"
+  }
+}
